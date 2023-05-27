@@ -32,20 +32,37 @@
  */
 public class CrossbodyBag extends Bag {
     private int numberOfStraps;
+
+    /**
+     * Creates a new CrossbodyBag with the given color, capacity, and numberOfStraps.
+     *
+     * @param color
+     * @param capacity
+     * @param numberOfStraps
+     */
     public CrossbodyBag(String color, int capacity, int numberOfStraps) {
         super(color, capacity);
         this.numberOfStraps = numberOfStraps;
     }
 
+    /**
+     * Gets and returns the number of straps on this CrossbodyBag
+     */
     public int getNumberOfStraps() {
         return numberOfStraps;
     }
 
+    /**
+     * Increases the capacity of this CrossbodyBag by 2.
+     */
     @Override
     public void enhance() {
         super.increaseCapacity(2);
     }
 
+    /**
+     * Returns a description of the CrossbodyBag
+     */
     @Override
     public String toString() {
         return this.getColor() + " Crossbody Bag with " + this.numberOfStraps + " straps (" + this.getNumberOfContents()
